@@ -1,0 +1,88 @@
+<!--Andrews Home Server home page -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+  <head>
+  <meta http_equiv="Content-type" content="text/html; charset="UTF-8"/>
+  <title>Andrew's Home Server</title>
+  <meta http-equiv="Content-Langiage" content="en_us" />
+  
+  <meta "imagetoolbar" content="no" />
+  <meta name="MSSmartTagsPreventParsing" content="true" />
+  
+  <meta name="descriprion" content="Description" />
+  <meta name="keywords" content="Keywords" />
+  
+  <meta name="author" content="Andrew Knowles" />
+  
+  <style type="text/css" media="all">@import "css/ahs1.css";</style>
+  <style type="text/css" media="all">@import "css/ahs1.css";</style>
+ <!-- 
+  <link rel="icon" type="image/png" href="localhost:3036/HomeServer/ahs_logo.png">
+  <link rel="stylesheet" href="css/ahs1.css">
+ -->
+  </head>
+  
+  
+  <body>
+  <?PHP
+  public $db;
+  include('class_lib.php');
+    $config = new config("localhost", "root", "", "ahs", "", "mysqli"); //type in your data here…
+	$db = new db($config);
+    $db->openConnection();
+	?>
+  
+    <div id="page-container">
+		
+      <div id="header">
+		<h1>Andrew's Home Server</h1>
+	  </div>
+      
+      <div id="sidebar-a">
+			<h1>Top Links</h1>
+			<h2> <a href="http://www.bbc.co.uk/weather/"  target="_blank">BBC Weather</a> </br>
+				<a href="http://www.meteofrance.com"  target="_blank">French Weather</a> </br>
+				</br>
+				<a href="http://www.bbc.co.uk/food/"  target="_blank">BBC Food</a> </br>
+				</h2>
+		</div>
+	  
+      <div id="content">
+		<table>
+			<tr>
+				<td>
+			<a href="address.html">
+<img src="image/address_book.jpeg" alt="Address Book" width="142" height="142"></a>
+				</td>
+				<td>Address Book</td>
+			<tr>
+			<tr>
+				<td>
+			<a href="shopping.php">
+<img src="image/shopcart.jpeg" alt="Shopping List" width="142" height="142"></a>
+				</td>
+				<td>Shopping List</td>
+			<tr>
+			<tr>
+				<td>
+			<a href="recipe.html">
+<img src="image/hp_folder_recipe.jpeg" alt="Recipes" width="142" height="142"></a>
+				</td>
+				<td>Recipe Book</td>
+			<tr>
+		</table>
+
+
+	 </div>
+	  
+      <div id="footer">
+		<div id="altnav">
+			<a href="#">About</a>
+		</div>
+		Copyright Andrew Knowles
+	  </div>
+    </div>
+  </body>
+</html>
